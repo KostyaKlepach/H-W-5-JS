@@ -135,6 +135,17 @@ function cursorCheck(str) {
 cursorCheck('ostap');
 
 // 9 task
+// A function which returns a string with all letters in uppercase 
+// (without built in string’s method). The function supports only english alphabet.
+
+function toUppercase(str) {
+  let newStr = '';
+  for(let i = 0; i <= str.length-1; i++){
+    newStr += str[i].toUpperCase();
+  }
+  console.log(newStr);
+}
+toUppercase('abc');
 
 // 10 task
 // A function which removes duplication of letters in string. The function must be case-insensitive.
@@ -151,3 +162,20 @@ function removeDuplicationLetters(str){
   console.log(uniq);
 }
 removeDuplicationLetters('Hello I am Iron Man');
+
+// 11 task
+// A function that when given a number n returns the n-th number in the Fibonacci Sequence. 
+// The sequence starts from 1 and looks like this: 1, 1, 2, 3, 5, 8, 13, 21…
+
+function getFibonacci(n){
+  let a = 1;
+  let b = 1;
+  for (var i = 3; i <= n; i++) {
+    let c = a + b;
+    a = b;
+    b = c;
+  }
+  console.log(b);
+}
+
+getFibonacci(7);
